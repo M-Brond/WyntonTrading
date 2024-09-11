@@ -1,7 +1,14 @@
-import React from 'react';
-import { Menu, X, ChevronRight, BarChart2, PieChart, TrendingUp, Globe, Users, DollarSign } from 'lucide-react';
-import Image from 'next/image';
+import Error from 'next/error';
 
-export default function Component() {
-  // Your component code here (as provided in the previous response)
+export default function Home() {
+  try {
+    return (
+      <div>
+        <h1>Hello, World!</h1>
+      </div>
+    );
+  } catch (error) {
+    console.error(error);
+    return <Error statusCode={500} />;
+  }
 }
